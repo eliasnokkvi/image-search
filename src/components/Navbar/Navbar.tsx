@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   NavContainer,
   NavContent,
-  Title,
-  SearchContainer,
-  SearchInput,
   SearchButton,
+  SearchContainer,
   SearchIcon,
+  SearchInput,
+  Title,
 } from "./Navbar.styles";
 
 interface Props {

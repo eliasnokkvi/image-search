@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
 import { SearchAlt } from "@styled-icons/boxicons-regular/SearchAlt";
+import styled from "styled-components";
 
 export const NavContent = styled.div`
   display: flex;

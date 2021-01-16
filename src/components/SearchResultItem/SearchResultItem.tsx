@@ -1,9 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { ISearchResultItem } from "../../types";
 import {
-  ResultItem,
   ResultImage,
+  ResultItem,
   ResultTitle,
   ResultWebsite,
 } from "./SearchResultItem.styles";
