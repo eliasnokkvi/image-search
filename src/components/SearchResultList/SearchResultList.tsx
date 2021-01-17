@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { BeatLoader } from "react-spinners";
 import styled from "styled-components";
 import { ISearchResultItem } from "../../types";
+import { LoadingSpinner } from "../LoadingSpinner";
 import { SearchResultItem } from "../SearchResultItem/SearchResultItem";
 import { SearchResultPreview } from "../SearchResultPreview/SearchResultPreview";
 
@@ -40,7 +40,7 @@ export const SearchResultList: React.FC<Props> = ({
         dataLength={visibleResults.length}
         next={requestMore}
         hasMore={visibleResults.length < totalResults}
-        loader={<BeatLoader />}
+        loader={<LoadingSpinner />}
         scrollableTarget="body"
       >
         <SearchResultsContainer>

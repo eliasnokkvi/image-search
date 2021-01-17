@@ -27,15 +27,16 @@ export const ResultItem = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: calc(100% / 4 - 16px);
+
   box-sizing: border-box;
-  border-radius: 4px;
   padding: 8px 10px;
 
-  width: calc(100% / 4 - 16px);
   margin-right: 16px;
   margin-bottom: 8px;
 
   border: 1px solid #dfe1e5;
+  border-radius: 4px;
 
   cursor: pointer;
 

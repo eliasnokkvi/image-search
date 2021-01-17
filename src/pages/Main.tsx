@@ -4,7 +4,7 @@ import { Navbar } from "../components/Navbar/Navbar";
 import { SearchResultList } from "../components/SearchResultList/SearchResultList";
 import { ISearchResult, ISearchResultItem } from "../types";
 import axios from "axios";
-import { BeatLoader } from "react-spinners";
+import { LoadingSpinner } from "../components/LoadingSpinner";
 
 const apiKey = "AIzaSyCefJfjoi6Qx4o9UL7ruz8gaQ_MH71e7Ck";
 
@@ -34,6 +34,8 @@ export const Main: React.FC = () => {
       setTotalResults(totalResults);
     }
 
+    /** risky to index without checking if length of nextPage array exists,
+     * but haven't looked too much into the api docs for this. I assume that nextPage is an optional property instead. */
     if (searchResults.queries.nextPage) {
       setSearchIndex(searchResults.queries.nextPage[0].startIndex);
     }
@@ -65,7 +67,7 @@ export const Main: React.FC = () => {
 
       <ContentContainer>
         {isLoading ? (
-          <BeatLoader />
+          <LoadingSpinner />
         ) : (
           <SearchResultList
             searchResults={searchResults}

@@ -4,26 +4,37 @@ import { CloseOutline } from "@styled-icons/evaicons-outline/CloseOutline";
 
 export const Container = styled.div`
   width: 40%;
-  height: 100vh;
-  position: relative;
   background-color: #141518;
+  border-radius: 4px;
+
+  margin-top: 4px;
+  position: relative;
 `;
 
 export const PreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
-  position: absolute;
+
+  position: sticky;
   top: 0;
-  left: 0;
 
   color: white;
-
   padding: 16px;
+`;
+
+export const PreviewContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid white;
+  margin-top: 16px;
+  padding: 16px 0;
 `;
 
 export const PreviewImage = styled.img`
   width: 100%;
   height: 400px;
+  object-fit: contain;
 
   cursor: pointer;
 `;
@@ -31,15 +42,6 @@ export const PreviewImage = styled.img`
 export const PreviewImageWrapper = styled.div`
   width: 100%;
   height: 400px;
-  position: relative;
-`;
-
-export const PreviewContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid white;
-  margin-top: 16px;
-  padding: 16px 0;
 `;
 
 export const PreviewTitle = styled.h1`
@@ -81,8 +83,8 @@ export const CloseIcon = styled(CloseOutline)`
   border-radius: 45%;
 
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 8px;
+  left: 8px;
 
   :hover {
     cursor: pointer;

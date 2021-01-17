@@ -24,8 +24,6 @@ export const Navbar: React.FC<Props> = ({
     setSearchValue(inputEvent.target.value);
   };
 
-  console.log("inside navbar");
-
   const handleSubmit = (
     e:
       | React.FormEvent<HTMLFormElement>
